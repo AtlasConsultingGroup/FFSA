@@ -346,7 +346,7 @@ function Home({ setPage }) {
               width: "44px", height: "44px", borderRadius: "12px", marginBottom: "18px",
               background: `${C.green}0c`, display: "flex", alignItems: "center", justifyContent: "center",
               fontSize: "22px",
-            }}>🏈</div>
+            }}><svg aria-hidden="true" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M3 21C1 8 8 1 21 3c2 13-5 20-18 18Zm5-5 8-8m-7 3 4 4m-1-7 4 4"/></svg></div>
             <h3 style={{
               fontFamily: "'Playfair Display', serif", fontSize: "20px", fontWeight: 700,
               color: C.navy, margin: "0 0 8px",
@@ -366,7 +366,7 @@ function Home({ setPage }) {
               width: "44px", height: "44px", borderRadius: "12px", marginBottom: "18px",
               background: `${C.gold}15`, display: "flex", alignItems: "center", justifyContent: "center",
               fontSize: "22px",
-            }}>👤</div>
+            }}><svg aria-hidden="true" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M7 7a5 5 0 1 0 10 0 5 5 0 1 0-10 0ZM3 22v-2a9 9 0 0 1 18 0v2"/></svg></div>
             <h3 style={{
               fontFamily: "'Playfair Display', serif", fontSize: "20px", fontWeight: 700,
               color: C.navy, margin: "0 0 8px",
@@ -719,7 +719,7 @@ function PlayerReg({ onSubmit, teams }) {
                   <img src={photo} alt="Player" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                 ) : (
                   <div style={{ textAlign: "center" }}>
-                    <div style={{ fontSize: "24px", marginBottom: "2px" }}>📷</div>
+                    <div style={{ fontSize: "24px", marginBottom: "2px" }}><svg aria-hidden="true" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M3 6h5l2-3h4l2 3h5v15H3Zm5 7a4 4 0 1 0 8 0 4 4 0 1 0-8 0"/></svg></div>
                     <div style={{ fontFamily: "'Outfit', sans-serif", fontSize: "9px", color: C.textFaint }}>Upload</div>
                   </div>
                 )}
@@ -834,7 +834,7 @@ function Admin({ teams, players }) {
         <Card style={{ maxWidth: "380px", width: "100%", overflow: "hidden" }}>
           <FlagStripe height={3} />
           <div style={{ padding: "40px", textAlign: "center" }}>
-            <div style={{ fontSize: "32px", marginBottom: "16px" }}>🔒</div>
+            <div style={{ fontSize: "32px", marginBottom: "16px" }}><svg aria-hidden="true" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M5 10h14v12H5ZM8 10V6a4 4 0 0 1 8 0v4"/></svg></div>
             <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "22px", fontWeight: 800, color: C.navy, margin: "0 0 6px" }}>Admin Access</h2>
             <p style={{ fontFamily: "'Outfit', sans-serif", fontSize: "13px", color: C.textLight, margin: "0 0 24px" }}>Sign in with your admin account</p>
             {authError && (
@@ -1080,6 +1080,7 @@ export default function App() {
       {page === "team" && <TeamReg onSubmit={handleTeamReg} />}
       {page === "player" && <PlayerReg onSubmit={handlePlayerReg} teams={teams} />}
       {page === "admin" && <Admin teams={teams} players={players} />}
+      <footer style={{ padding: "24px 16px", textAlign: "center", fontSize: "12px", color: C.navy, background: C.bg }}><a href="https://atlascg.co.za" target="_blank" rel="noopener noreferrer">Powered by Atlas Consulting Group</a></footer>
     </div>
     </ErrorBoundary>
   );
